@@ -1,0 +1,397 @@
+@import url(https://fonts.googleapis.com/css?family=Share:400,700&subset=latin,latin-ext);
+
+@font-face {
+    font-family: "stalinistoneRegular";
+    src: url("/fonts/StalinistOne-Regular.ttf");
+}
+
+.stalinistoneRegular {
+    font-family: "stalinistoneRegular", sans-serif;
+}
+
+@font-face {
+    font-family: "montserratsubrayadaRegular";
+    src: url("/fonts/MontserratSubrayada-Regular.ttf");
+}
+
+.montserratsubrayadaRegular {
+    font-family: "montserratsubrayadaRegular", sans-serif;
+    text-align: justify;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font: 0.75em/1.5 sans-serif;
+    background: #FFE500;
+}
+
+
+.tabs {
+    margin:  0;
+    padding: 0;
+    list-style: none;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.tabs__item {
+    width: 100%;
+    float: left;
+}
+
+@media screen and (min-width: 40em) {
+    .tabs__item {
+        display: table-cell;
+        float: none;
+        width: auto;
+    }
+}
+
+.tabs__link {
+    display: block;
+}
+
+
+/*START OF NAVIGATION*/
+
+
+.primary-nav {
+    text-align: center;
+    border-radius: 0;
+    overflow: hidden; 
+}
+
+.primary-nav a {
+    padding: .75em 1em;
+    color: #FFE500;
+    background-color: #000;
+    text-decoration: none;
+    border-right: 1px solid #FFE500;
+    border-bottom: 1px solid #FFE500;
+    font-family: Share, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1.75em;
+}
+
+.primary-nav a:hover {
+    color: #000;
+    background: #FFE500;
+}
+
+
+.js .nav-collapse {
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.nav-collapse.opened {
+    max-height: 9999px;
+}
+
+.disable-pointer-events {
+    pointer-events: none !important;
+}
+
+.nav-toggle {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+@media screen and (min-width: 40em) {
+    .js .nav-collapse {
+        position: relative;
+    }
+    .js .nav-collapse.closed {
+        max-height: none;
+    }
+    .nav-toggle {
+        display: none;
+    }
+}
+
+.nav-collapse {
+    list-style: none;
+    width: 100%;
+    float: left;
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav-toggle {
+    position: fixed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-decoration: none;
+    text-indent: -999px;
+    position: relative;
+    overflow: hidden;
+    width: 70px;
+    height: 55px;
+    float: right;
+}
+
+.nav-toggle:before {
+    color: #000; 
+    font-family: "responsivenav", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    font-size: 28px;
+    text-transform: none;
+    position: absolute;
+    content: "≡";
+    text-indent: 0;
+    text-align: center;
+    line-height: 55px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav-toggle.active::before {
+    font-size: 24px;
+    content:"x";
+}
+
+
+/*END OF NAVIGATION*/
+
+
+/*START OF BANNERS DESIGN*/
+
+
+.widget {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.center {
+    position: relative;
+    margin: auto;
+}
+  
+.text h1 {
+    text-align: center;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+    color: #FFE500;
+    margin: 35px;
+    font-family: Share;
+    font-size: 18vw;
+}
+
+.widget1 {
+    background-color: #FFE500;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+  
+.text p {
+    text-align: center;
+    color: #000;
+    font-family: Share;
+    margin: 35px;
+    font-size: 2vw;
+}
+    
+.text h1 {
+    text-align: center;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+    color: #FFE500;
+    margin: 35px;
+    font-family: Share;
+    font-size: 18vw;
+}
+
+.widget3 {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.text3 .projects-link{
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+    color: #FFE500;
+    margin: 35px;
+    font-family: Share;
+    font-size: 12vw;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+/*END OF BANNERS DESIGN*/
+
+
+/*START OF TECHSTACK*/
+
+
+.techstack {
+    text-align: center;
+    font-family: Share;
+    font-size: 5vw;
+    line-height: 1.2;
+    letter-spacing: 0em;
+    font-weight: 600;
+}
+
+.techskills {
+    margin: 40px;
+    align-items: center;
+}
+
+.techskills {
+    text-align: center;
+}
+
+.top-skillset-buttons,
+.middle-skillset-buttons,
+.bottom-skillset-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.retro-button {
+    width: 160px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 3px solid black;
+    background: linear-gradient(to right, black 50%, #FFE500 0%);
+    background-repeat: repeat;
+    background-size: 200%;
+    background-position: 100% 0;
+    box-shadow: 0.4rem 0.4rem 0 black;
+    transition: all 0.3s;
+}
+  
+.retro-button:hover {
+    color: #FFE500;
+    border: none;
+    box-shadow: none;
+    background-position: 0 0;
+    transform: translate(0.4rem, 0.4rem);
+}
+  
+.retro-button-figma {
+    width: 160px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 3px solid black;
+    background: linear-gradient(to right, black 50%, #FFE500 0%);
+    background-repeat: repeat;
+    background-size: 200%;
+    background-position: 100% 0;
+    box-shadow: 0.4rem 0.4rem 0 black;
+    transition: all 0.3s;
+}
+  
+.retro-button-figma:hover {
+    color: #FFE500;
+    border: none;
+    box-shadow: none;
+    background-position: 0 0;
+    transform: translate(0.4rem, 0.4rem);
+}
+
+
+/*END OF TECHSTACK*/
+
+
+/*START OF FOOTER*/
+
+
+.landing-scrolling-socials {
+    width: 100%;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+.scrolling-text {
+    font-size: 45px;
+    white-space: nowrap;
+    animation: marquee 16s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+  
+.name {
+    margin-left: 8px;
+    font-size: 1.5vw;
+}
+  
+.section {
+    margin-right: 8px;
+    font-size: 1.5vw;
+}
+
+/*END OF FOOTER*/
+
+
+/*OTHERS*/
+
+
+::selection {
+      background: #f2f2f2;
+}

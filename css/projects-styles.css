@@ -1,0 +1,468 @@
+@import url(https://fonts.googleapis.com/css?family=Share:400,700&subset=latin,latin-ext);
+
+@font-face {
+    font-family: "stalinistoneRegular";
+    src: url("/fonts/StalinistOne-Regular.ttf");
+}
+
+.stalinistoneRegular {
+    font-family: "stalinistoneRegular", sans-serif;
+}
+
+@font-face {
+    font-family: "montserratsubrayadaRegular";
+    src: url("/fonts/MontserratSubrayada-Regular.ttf");
+}
+
+.montserratsubrayadaRegular {
+    font-family: "montserratsubrayadaRegular", sans-serif;
+    text-align: justify;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font: 0.75em/1.5 sans-serif;
+    background: #FFE500;
+}
+
+
+.tabs {
+    margin:  0;
+    padding: 0;
+    list-style: none;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.tabs__item {
+    width: 100%;
+    float: left;
+}
+
+@media screen and (min-width: 40em) {
+    .tabs__item {
+        display: table-cell;
+        float: none;
+        width: auto;
+    }
+}
+
+.tabs__link {
+    display: block;
+}
+
+
+/*START OF NAVIGATION*/
+
+
+.primary-nav {
+    text-align: center;
+    border-radius: 0;
+    overflow: hidden; 
+}
+
+.primary-nav a {
+    padding: .75em 1em;
+    color: #FFE500;
+    background-color: #000;
+    text-decoration: none;
+    border-right: 1px solid #FFE500;
+    border-bottom: 1px solid #FFE500;
+    font-family: Share, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1.75em;
+}
+
+.primary-nav a:hover {
+    color: #000;
+    background: #FFE500;
+}
+
+
+.js .nav-collapse {
+    clip: rect(0 0 0 0);
+    max-height: 0;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.nav-collapse.opened {
+    max-height: 9999px;
+}
+
+.disable-pointer-events {
+    pointer-events: none !important;
+}
+
+.nav-toggle {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+@media screen and (min-width: 40em) {
+    .js .nav-collapse {
+        position: relative;
+    }
+    .js .nav-collapse.closed {
+        max-height: none;
+    }
+    .nav-toggle {
+        display: none;
+    }
+}
+
+.nav-collapse {
+    list-style: none;
+    width: 100%;
+    float: left;
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav-toggle {
+    position: fixed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-decoration: none;
+    text-indent: -999px;
+    position: relative;
+    overflow: hidden;
+    width: 70px;
+    height: 55px;
+    float: right;
+}
+
+.nav-toggle:before {
+    color: #000; 
+    font-family: "responsivenav", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    font-size: 28px;
+    text-transform: none;
+    position: absolute;
+    content: "≡";
+    text-indent: 0;
+    text-align: center;
+    line-height: 55px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav-toggle.active::before {
+    font-size: 24px;
+    content:"x";
+}
+
+
+/*END OF NAVIGATION*/
+
+
+/*START OF BANNERS DESIGN*/
+
+
+.widget {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+  
+.center {
+    position: relative;
+    margin: auto;
+}
+  
+  
+.text h1 {
+    text-align: center;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+    color: #FFE500;
+    margin: 35px;
+    font-family: Share;
+    font-size: 18vw;
+}
+
+
+/*END OF BANNERS DESIGN*/
+
+
+/* START OF PORTFOLIO DESIGN */
+
+.row-0-gutter {
+    margin-left: -13px;
+    margin-right: -13px;
+}
+
+.col-0-gutter {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+
+.portfolio {
+    top: 60px;
+    position: relative;
+}
+
+.row {
+    position: relative;
+}
+
+figure {
+	position: relative;
+    overflow: hidden;
+    margin: 0 1px 1px 0;
+    background: #726FB9;
+    text-align: center;
+    cursor: pointer;	
+}
+
+figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;	
+}
+
+.ot-portfolio-item figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+.ot-portfolio-item figure figcaption, .ot-portfolio-item figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+figure.effect-bubba {
+	background: #000;
+	margin-bottom: 1px;
+}
+
+figure.effect-bubba img {
+	opacity: 0.8;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+}
+
+figure.effect-bubba:hover img {
+	opacity: 0.4;
+}
+
+figure.effect-bubba figcaption::before,
+figure.effect-bubba figcaption::after {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-bubba figcaption::before {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+
+figure.effect-bubba figcaption::after {
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	-webkit-transform: scale(1,0);
+	transform: scale(1,0);
+}
+
+figure.effect-bubba h2 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+	padding-top: 30%;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,-20px,0);
+	transform: translate3d(0,-20px,0);
+}
+
+figure.effect-bubba p {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+	padding: 20px 2.5em;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(0,20px,0);
+	transform: translate3d(0,20px,0);
+}
+
+figure.effect-bubba:hover figcaption::before,
+figure.effect-bubba:hover figcaption::after {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+figure.effect-bubba:hover h2,
+figure.effect-bubba:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.light-bg {
+    background: #f1f1f1;
+}
+
+.intro-section {
+	padding: 60px 0 0 0;
+	margin: 0;
+}
+
+.intro-section .section-title {
+	text-align: justify;	
+}
+
+.intro-section p {
+	font-size: 14px;
+	color: #6B6B6B;
+	font-weight: 500;
+	line-height: 32px;
+	padding: 47px;
+	font-family: "Raleway";
+	margin: 0;
+	background-color: #F9F9F9;
+}
+
+/*START OF MODAL DESIGN*/
+
+.modal-content {
+	border-radius: 0;	
+}
+.modal-header .close {
+	font-size: 30px;	
+}
+.modal-title {    
+	text-transform: uppercase;
+	font-size: 23px;
+}
+
+.modal-body {
+	padding: 0;
+}
+
+.modal-body p {
+	margin: 30px 20px;
+	color: #2D2D2D;		
+}
+
+.modal-works {
+font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #fff;
+    margin: 25px 20px;
+}
+
+.modal-works span {
+	background-color: #f8e21f;
+    margin-right: 15px;
+    padding: 5px 10px;
+}
+
+
+/*END OF MODAL DESIGN*/
+
+
+/*START OF FOOTER*/
+
+
+.landing-scrolling-socials {
+    width: 100%;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+.scrolling-text {
+    font-size: 45px;
+    white-space: nowrap;
+    animation: marquee 16s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+  
+.name {
+    margin-left: 8px;
+    font-size: 1.5vw;
+}
+  
+.section {
+    margin-right: 8px;
+    font-size: 1.5vw;
+}
+
+/*END OF FOOTER*/
+
+
+/*OTHERS*/
+
+
+::selection {
+      background: #f2f2f2;
+}
